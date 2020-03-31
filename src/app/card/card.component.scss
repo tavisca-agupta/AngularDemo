@@ -1,0 +1,30 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+ }
+ 
+.card {
+    flex: 1 0 500px;
+    box-sizing: border-box;
+    margin: 1rem .25em;
+    background: #f0f0f0;
+    padding:10px;
+}
+@media screen and (min-width: 40em) {
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+ 
+    .card {
+        flex: 0 1 calc(50% - 1em);
+    }
+}
+ 
+@media screen and (min-width: 60em) {
+    .card {
+        flex: 0 1 calc(25% - 1em);
+    }
+}
+ 

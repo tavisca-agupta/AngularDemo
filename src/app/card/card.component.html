@@ -1,0 +1,42 @@
+<div class="centered">
+
+    <section class="cards">
+
+        <article class="card">
+            <h3>Data from Angular Service</h3>
+            <p>{{mockString}}</p>
+        </article><!-- /card-one -->
+
+        <article class="card">
+            <p>Property Binding</p>
+            <input type="text" name="username" [value]="userName">
+
+            <p>Event Binding</p>
+            <button (click)= "displayName()">Click Me</button>
+            
+            <p>Template Reference Variable</p>
+            <input #refVar type="text" name="" id="" >
+            <button (click)= "logger(refVar.value)">Send</button>
+
+            <p>Two Way Binding (ngModule)</p>
+            <input type="text" [(ngModel)]="twoWayBinding" id="">
+        </article><!-- /card-two -->
+
+        <article class="card">
+            <p>ngModule - Text Will appear bellow</p>
+            <p>{{twoWayBinding}}</p>
+
+            <p>Pipes</p>
+            <p>lowercase - >{{pipeLower | lowercase}}</p>
+            <p>lowercase - >{{pipeUpper | uppercase}}</p>
+            <p>lowercase - >{{pipeDate | date:'short'}}</p>
+            <p>lowercase - >{{pipeDate | date:'shortDate'}}</p>
+        </article><!-- /card-three -->
+
+        <article class="card">
+            <p>content for card four</p>
+        </article><!-- /card-four -->
+
+    </section>
+</div>
+<p>Hello {{name}}</p>
