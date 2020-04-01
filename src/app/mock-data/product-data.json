@@ -1,0 +1,22 @@
+[
+    {
+        "id":"1",
+        "productName":"Apple",
+        "productType":"Fruits"
+    },
+    {
+        "id":"2",
+        "productName":"Ornage",
+        "productType":"Fruits"
+    },
+    {
+        "id":"3",
+        "productName":"Tomato",
+        "productType":"Fruits"
+    },
+    {
+        "id":"4",
+        "productName":"Ladyfinger",
+        "productType":"Vegetable"
+    }
+]
