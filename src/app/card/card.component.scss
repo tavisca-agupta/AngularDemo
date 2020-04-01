@@ -1,3 +1,24 @@
+.mat-blue{
+    background: #2f89fc;
+}
+.mat-red{
+    background: #ff304f;
+}
+.mat-green{
+    background: #83e85a;
+}
+.mat-purple{
+    background: #9c1de7;
+}
+.mat-silver{
+    background: #cfc7c7;
+}
+.mat-navyBlue{
+    background: #1e2a78;
+}
+.mat-yellow{
+    background: #ffd615;
+}
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -7,9 +28,22 @@
     flex: 1 0 500px;
     box-sizing: border-box;
     margin: 1rem .25em;
-    background: #f0f0f0;
+    background: white;
     padding:10px;
+    box-shadow: 2px 4px 8px #b1b1b1;
+    transition: 0.5s;
+    border-radius: .3em;
 }
+.card-header{
+    margin: -5px;
+    padding: 20px 10px;
+    border-radius: 3px 3px 0px 0px;;
+    color: white;
+}
+.card-body{
+    margin: 15px 5px;
+}
+
 @media screen and (min-width: 40em) {
     .cards {
         display: flex;

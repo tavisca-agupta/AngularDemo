@@ -3,42 +3,88 @@
     <section class="cards">
 
         <article class="card">
-            <h3>Data from Angular Service</h3>
-            <p>{{mockString}}</p>
-        </article><!-- /card-one -->
+            <div class="card-header mat-blue">
+                <span>Data from Service Class</span>
+            </div>
+            <div class="card-body">
+                <span>{{mockString}}</span>
+            </div>
+        </article>
 
         <article class="card">
-            <p>Property Binding</p>
-            <input type="text" name="username" [value]="userName">
+            <div class="card-header mat-green">
+                <span>Property Binding</span>
+            </div>
+            <div class="card-body">
+                <input type="text" name="username" [value]="userName">
 
-            <p>Event Binding</p>
-            <button (click)= "displayName()">Click Me</button>
-            
-            <p>Template Reference Variable</p>
-            <input #refVar type="text" name="" id="" >
-            <button (click)= "logger(refVar.value)">Send</button>
+                <p>Event Binding</p>
+                <button (click)="displayName()">Click Me</button>
 
-            <p>Two Way Binding (ngModule)</p>
-            <input type="text" [(ngModel)]="twoWayBinding" id="">
-        </article><!-- /card-two -->
+                <p>Template Reference Variable</p>
+                <input #refVar type="text" name="" id="">
+                <button (click)="logger(refVar.value)">Send</button>
 
-        <article class="card">
-            <p>ngModule - Text Will appear bellow</p>
-            <p>{{twoWayBinding}}</p>
-
-            <p>Pipes</p>
-            <p>lowercase - >{{pipeLower | lowercase}}</p>
-            <p>Uppercase - >{{pipeUpper | uppercase}}</p>
-            <p>Short Date - >{{pipeDate | date:'short'}}</p>
-            <p>Short Date 1 - >{{pipeDate | date:'shortDate'}}</p>
-        </article><!-- /card-three -->
+                <p>Two Way Binding (ngModel)</p>
+                <input type="text" [(ngModel)]="twoWayBinding" id="" placeholder="Type here">
+            </div>
+        </article>
 
         <article class="card">
-            <p>Routing In Angular</p>
-            <button routerLink="/about">AboutMe</button>
-            <button routerLink="/contact">Contact</button>
-            <button routerLink="/">Home</button>
-        </article><!-- /card-four -->
+            <div class="card-header mat-red">
+                <span>Heading Here</span>
+            </div>
+            <div>
+                <p>ngModel - Text Will appear bellow:</p>
+                <p>-> {{twoWayBinding}}</p>
+
+                <p>Pipes</p>
+                <p>lowercase - > {{pipeLower | lowercase}}</p>
+                <p>Uppercase - > {{pipeUpper | uppercase}}</p>
+                <p>Short Date - > {{pipeDate | date:'short'}}</p>
+                <p>Short Date 1 - > {{pipeDate | date:'shortDate'}}</p>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-header mat-purple">
+                <span>Routing In Angular</span>
+            </div>
+            <div>
+                <p></p>
+                <button routerLink="/about">AboutMe</button><br>
+                <button routerLink="/contact">Contact</button><br>
+                <button routerLink="/">Home</button><br>
+            </div>
+        </article>
+
+
+        <article class="card">
+            <div class="card-header mat-navyBlue">
+                <span>Material Card</span>
+            </div>
+            <div>
+                <p>hi everyone</p>
+            </div>
+        </article>
+        <article class="card">
+            <div class="card-header mat-yellow">
+                <span>Heading Here</span>
+            </div>
+            <div>
+                <p>hi everyone</p>
+            </div>
+        </article>
+
+
+        <article class="card">
+            <div class="card-header mat-silver">
+                <span>Heading Here</span>
+            </div>
+            <div>
+                <p>hi everyone</p>
+            </div>
+        </article>
 
     </section>
 </div>
