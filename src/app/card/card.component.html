@@ -28,15 +28,17 @@
 
             <p>Pipes</p>
             <p>lowercase - >{{pipeLower | lowercase}}</p>
-            <p>lowercase - >{{pipeUpper | uppercase}}</p>
-            <p>lowercase - >{{pipeDate | date:'short'}}</p>
-            <p>lowercase - >{{pipeDate | date:'shortDate'}}</p>
+            <p>Uppercase - >{{pipeUpper | uppercase}}</p>
+            <p>Short Date - >{{pipeDate | date:'short'}}</p>
+            <p>Short Date 1 - >{{pipeDate | date:'shortDate'}}</p>
         </article><!-- /card-three -->
 
         <article class="card">
-            <p>content for card four</p>
+            <p>Routing In Angular</p>
+            <button routerLink="/about">AboutMe</button>
+            <button routerLink="/contact">Contact</button>
+            <button routerLink="/">Home</button>
         </article><!-- /card-four -->
 
     </section>
 </div>
-<p>Hello {{name}}</p>

@@ -9,24 +9,28 @@ import { MockDataService } from '../mock-data/mock-data.service';
 export class CardComponent implements OnInit {
   public name = "Aman";
   public mockString = "";
-  public userName="Text from Class file";
-  public twoWayBinding="";
-  public pipeLower="ANGUlar";
-  public pipeUpper="framework";
-  public pipeDate=new Date();
+  public userName = "Text from Class file";
+  public twoWayBinding = "";
+  public pipeLower = "ANGUlar";
+  public pipeUpper = "framework";
+  public pipeDate = new Date();
+  public mockProductData = [];
+  public errorMsg="";
 
-  constructor(private _mockData: MockDataService) { 
-
-    this.mockString=this._mockData.GetMockString();
+  constructor(private _mockData: MockDataService) {
   }
 
   ngOnInit(): void {
+    this.mockString = this._mockData.GetMockString();
+
+    this._mockData.getJsonData().subscribe(data => this.mockProductData = data,
+      error=> this.errorMsg =error);
   }
 
-  displayName(){
+  displayName() {
     window.alert("Activated from Event binding");
   }
-  logger(recievedValue){
-    window.alert("this is recieved from input "+ recievedValue);
+  logger(recievedValue) {
+    window.alert("this is recieved from input " + recievedValue);
   }
 }
