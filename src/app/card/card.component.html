@@ -19,11 +19,11 @@
                 <input type="text" name="username" [value]="userName">
 
                 <p>Event Binding</p>
-                <button (click)="displayName()">Click Me</button>
+                <button class="btn mat-green" (click)="displayName()"><span>Click Me</span></button>
 
                 <p>Template Reference Variable</p>
                 <input #refVar type="text" name="" id="">
-                <button (click)="logger(refVar.value)">Send</button>
+                <button class="btn mat-red" (click)="logger(refVar.value)"><span>Send button</span></button>
 
                 <p>Two Way Binding (ngModel)</p>
                 <input type="text" [(ngModel)]="twoWayBinding" id="" placeholder="Type here">
@@ -51,10 +51,9 @@
                 <span>Routing In Angular</span>
             </div>
             <div>
-                <p></p>
-                <button routerLink="/about">AboutMe</button><br>
-                <button routerLink="/contact">Contact</button><br>
-                <button routerLink="/">Home</button><br>
+                <button class="btn mat-yellow" routerLink="/about"><span>About Me</span></button><br>
+                <button class="btn mat-blue" routerLink="/contact"><span>Contact</span></button><br>
+                <button class="btn mat-purple" routerLink="/"><span>Home</span></button><br>
             </div>
         </article>
 

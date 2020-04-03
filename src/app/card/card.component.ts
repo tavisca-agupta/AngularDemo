@@ -9,7 +9,7 @@ import { MockDataService } from '../mock-data/mock-data.service';
 export class CardComponent implements OnInit {
   public name = "Aman";
   public mockString = "";
-  public userName = "Text from Class file";
+  public userName = "Property Binding from ts class";
   public twoWayBinding = "";
   public pipeLower = "ANGUlar";
   public pipeUpper = "framework";
@@ -33,4 +33,5 @@ export class CardComponent implements OnInit {
   logger(recievedValue) {
     window.alert("this is recieved from input " + recievedValue);
   }
+  
 }

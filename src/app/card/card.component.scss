@@ -1,24 +1,110 @@
-.mat-blue{
-    background: #2f89fc;
+
+$color-list:("blue":#2f89fc,
+            "red":#ff304f,
+            "green":#2ecc71,
+            "purple":#9c1de7,
+            "silver":#cfc7c7,
+            "navyBlue":#1e2a78,
+            "yellow":#ffd615);
+
+@each $color,$value in $color-list {
+    //css property for mat-$color
+    .mat-#{$color}{
+        background: $value;
+        min-width: 80px;
+    }
 }
-.mat-red{
-    background: #ff304f;
+
+$bg-color: #424242;
+$hl-color: #2196F3;
+$muted-color: mix(white, $bg-color, 70%);
+$trans-time: 300ms;
+$width: 320px;
+
+input,
+textarea {
+  background: none;
+  color: $muted-color;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: $width;
+  border: none;
+  border-radius: 3px;
+  border-bottom: 1px solid $muted-color;
+  &:focus {
+    outline: none;
+  }
+  &:focus ~ label,
+  &:valid ~ label {
+    top: -14px;
+    font-size: 12px;
+    color: $hl-color;
+  }
+  &:focus ~ .bar:before {
+    width: $width;
+  }
 }
-.mat-green{
-    background: #83e85a;
-}
-.mat-purple{
-    background: #9c1de7;
-}
-.mat-silver{
-    background: #cfc7c7;
-}
-.mat-navyBlue{
-    background: #1e2a78;
-}
-.mat-yellow{
-    background: #ffd615;
-}
+
+.btn {
+    position: relative;
+    //display: block;
+    margin: 5px 10px;
+    //padding: 10px 15px;
+    overflow: hidden;
+  
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    color: #ecf0f1;
+    transition: background-color .3s;
+  }
+  
+  @each $color,$value in $color-list {
+      .btn.mat-#{$color}:hover ,.btn.mat-#{$color}:focus{
+          background: darken($value, 10);
+      }  
+  }
+//above code is similar to this bellow code with multiple color simultanouly used with .btn class
+//   .btn:hover, .btn:focus {
+//     background: darken(red, 10%);
+//   }
+  
+//   .btn > * {
+//     position: relative;
+//   }
+  
+  .btn span {
+    display: block;
+    padding: 10px 5px;
+  }
+  
+  .btn:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    display: block;
+    width: 0;
+    padding-top: 0;
+    border-radius: 100%;
+    background-color: rgba(236, 240, 241, .3);
+    
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  
+  .btn:active:before {
+    width: 120%;
+    padding-top: 120%;
+    transition: width .2s ease-out, padding-top .2s ease-out;
+  }
+  
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -35,7 +121,7 @@
     border-radius: .3em;
 }
 .card-header{
-    margin: -5px;
+    margin: -5px -5px 0px -5px;
     padding: 20px 10px;
     border-radius: 3px 3px 0px 0px;;
     color: white;
